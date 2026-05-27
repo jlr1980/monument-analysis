@@ -1,19 +1,21 @@
 :root {
   /* Palette verified against Monument_Development_update_V2.pptx.pdf. */
-  --cream: #f5e9d2;
+  --cream: #f0e5d2;
   --cream-soft: #faf1dd;
-  --ink: #1a1a1a;
-  --ink-soft: #2b2b2b;
+  --ink: #1a1a2a;
+  --ink-soft: #2b2b3a;
 
   /* Accents */
   --crimson: #e5251c;
   --crimson-deep: #b91c1c;
 
-  /* Emphasis-card backgrounds. Oxblood is the primary; navy is used for the
-     four-pillar treatment in the source deck. */
+  /* Emphasis-card backgrounds. Navy is the deck's primary dark surface.
+     Oxblood remains defined for future targeted use but is no longer applied
+     to primary dark backgrounds. */
   --oxblood: #1f0606;
   --oxblood-soft: #2a0a0a;
-  --navy: #0b1a2a;
+  --navy: #0f1a2c;
+  --navy-soft: #18253a;
 
   --muted: #6b6b6b;
   --muted-on-dark: #a8a097;
@@ -22,6 +24,7 @@
 
   --radius: 4px;
   --radius-sm: 2px;
+  --radius-md: 6px;
   --content-max: 1040px;
   --content-narrow: 760px;
 }
