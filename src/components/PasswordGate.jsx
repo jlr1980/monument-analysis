@@ -40,6 +40,10 @@ export default function PasswordGate({ children }) {
 
   return (
     <div className="gate-screen">
+      <div className="gate-mark">
+        <span className="gate-mark-mono">MONUMENT</span>
+        <span>ANALYSIS</span>
+      </div>
       <form
         className={`gate-form ${shake ? "gate-shake" : ""}`}
         onSubmit={onSubmit}
@@ -55,7 +59,7 @@ export default function PasswordGate({ children }) {
           spellCheck={false}
         />
         <button className="gate-button" type="submit">
-          Open
+          Enter
         </button>
       </form>
       <a className="gate-forget" href="#" onClick={onForget}>

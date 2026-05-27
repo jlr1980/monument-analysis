@@ -14,8 +14,10 @@ export default function Header({ route }) {
     <header className="app-header">
       <div className="app-header-inner">
         <a className="app-title" href="#/memo">
-          Monument Analysis
+          <span className="app-title-mono">MONUMENT</span>
+          <span className="app-title-suffix">ANALYSIS</span>
         </a>
+        <span className="app-meta">Confidential</span>
       </div>
       <nav className="tab-bar-wrap">
         <div className="tab-bar">

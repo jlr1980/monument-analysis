@@ -8,23 +8,23 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
+  background: var(--cream);
   min-height: 100vh;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header (wordmark + tab bar) ---------- */
 .app-header {
+  background: var(--cream);
   border-bottom: 1px solid var(--border);
-  background: var(--bg);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 .app-header-inner {
-  max-width: 1040px;
+  max-width: var(--content-max);
   margin: 0 auto;
-  padding: 1.25rem 1.5rem 0.75rem;
+  padding: 1.5rem 1.5rem 0.6rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -32,22 +32,43 @@ body {
 }
 
 .app-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.15rem;
+  font-family: "Inter", sans-serif;
   font-style: italic;
-  color: var(--text-secondary);
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: -0.005em;
+  color: var(--ink);
   border-bottom: 1px solid transparent;
+  padding-bottom: 0;
 }
 
 .app-title:hover {
-  color: var(--text);
-  border-bottom-color: var(--text-secondary);
+  border-bottom: 1px solid transparent;
+  color: var(--ink);
+}
+
+.app-title-mono {
+  color: var(--crimson);
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+
+.app-title-suffix {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.app-meta {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
 }
 
 /* ---------- Tab bar ---------- */
 .tab-bar-wrap {
-  max-width: 1040px;
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 0 1.5rem;
   overflow-x: auto;
@@ -56,41 +77,43 @@ body {
 .tab-bar {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   white-space: nowrap;
 }
 
 .tab {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  padding: 0.6rem 0 0.7rem;
-  border-bottom: 1px solid transparent;
-  letter-spacing: 0.01em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  padding: 0.7rem 0 0.75rem;
+  border-bottom: 2px solid transparent;
   transition: color 120ms ease, border-color 120ms ease;
 }
 
 .tab:hover {
-  color: var(--text);
+  color: var(--ink);
   border-bottom-color: transparent;
 }
 
 .tab.active {
-  color: var(--sage);
-  border-bottom-color: var(--sage);
+  color: var(--crimson);
+  border-bottom-color: var(--crimson);
 }
 
 .tab.active:hover {
-  color: var(--sage);
-  border-bottom-color: var(--sage);
+  color: var(--crimson);
+  border-bottom-color: var(--crimson);
 }
 
 /* ---------- Markdown page (memo, deck, changelog, route content) ---------- */
 .markdown-page {
-  max-width: var(--content-max);
+  max-width: var(--content-narrow);
   margin: 0 auto;
-  padding: 2.25rem 1.5rem 5rem;
+  padding: 3rem 1.5rem 6rem;
 }
 
 .markdown-page h1:first-child {
@@ -100,91 +123,214 @@ body {
 .markdown-page hr {
   border: 0;
   border-top: 1px solid var(--border);
-  margin: 2.5rem 0;
+  margin: 3rem 0;
 }
 
+/* Tables: clean, small caps headers in muted ink, subtle row dividers in border-color.
+   Matches the deck's table treatment. */
 .markdown-page table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.92rem;
-  margin: 1.25rem 0 1.5rem;
+  margin: 1.5rem 0 2rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .markdown-page th,
 .markdown-page td {
-  padding: 0.55rem 0.7rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.7rem 0.85rem;
   text-align: left;
-  font-variant-numeric: tabular-nums;
+  border-bottom: 1px solid var(--border);
 }
 
 .markdown-page th {
   font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-weight: 600;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-secondary);
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.markdown-page tr:last-child td {
+  border-bottom: 1px solid var(--border-strong);
 }
 
 .markdown-page ul,
 .markdown-page ol {
-  margin: 0 0 1.1rem 1.3rem;
+  margin: 0 0 1.25rem 1.4rem;
   padding: 0;
 }
 
 .markdown-page li {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.45rem;
 }
 
 .markdown-page li > p {
   margin: 0 0 0.4rem;
 }
 
+/* ---------- Dark emphasis cards ---------- */
+.card-dark {
+  background: var(--oxblood);
+  color: var(--cream);
+  padding: 2rem 2rem 2.25rem;
+  border-radius: var(--radius);
+}
+
+.card-dark .section-label,
+.card-dark .eyebrow {
+  color: var(--crimson);
+}
+
+.card-dark .stat-number {
+  color: var(--cream);
+}
+
+.card-dark .stat-label {
+  color: var(--muted-on-dark);
+}
+
+.card-dark p {
+  color: var(--cream);
+}
+
+.card-dark .muted {
+  color: var(--muted-on-dark);
+}
+
+.card-dark a {
+  color: var(--crimson);
+}
+
+.card-navy {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 2rem 2rem 2.25rem;
+  border-radius: var(--radius);
+}
+
+.card-navy .section-label,
+.card-navy .eyebrow {
+  color: var(--crimson);
+}
+
+.card-navy p {
+  color: var(--cream);
+}
+
+/* ---------- Card-light (border-only card on cream) ---------- */
+.card-light {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 1.8rem 1.8rem 2rem;
+  border-radius: var(--radius);
+}
+
+/* ---------- Stat block (large numeral + tiny label) ---------- */
+.stat-block {
+  margin: 1.5rem 0;
+}
+
 /* ---------- Model section ---------- */
 .model-download {
-  margin: 2rem 0 1rem;
+  margin: 2.25rem 0 1.25rem;
 }
 
 .model-download-link {
-  display: inline-block;
-  padding: 0.65rem 1.1rem;
-  background: var(--sage);
-  color: var(--bg);
-  border: 1px solid var(--sage);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.35rem;
+  background: var(--crimson);
+  color: var(--cream);
+  border: 1px solid var(--crimson);
   border-radius: var(--radius-sm);
+  font-family: "Inter", sans-serif;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   transition: background-color 120ms ease, border-color 120ms ease;
 }
 
 .model-download-link:hover {
-  background: var(--sage-deep);
-  border-color: var(--sage-deep);
-  border-bottom: 1px solid var(--sage-deep);
+  background: var(--crimson-deep);
+  border-color: var(--crimson-deep);
+  color: var(--cream);
+  border-bottom: 1px solid var(--crimson-deep);
 }
 
 .model-note {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-style: italic;
 }
 
 /* ---------- Placeholder ---------- */
 .placeholder-note {
-  color: var(--text-secondary);
+  color: var(--muted);
   font-style: italic;
   margin-top: 2rem;
+}
+
+/* ---------- Multi-column section grid (matches deck's two-column agenda) ---------- */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem 3rem;
+  margin: 2.5rem 0;
+}
+
+@media (min-width: 720px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.section-grid-row {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.section-grid-row h3 {
+  margin-top: 0.3rem;
+  font-size: 1.35rem;
+}
+
+.section-grid-row p.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
 }
 
 /* ---------- Password gate ---------- */
 .gate-screen {
   min-height: 100vh;
-  background: var(--bg);
+  background: var(--cream);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 1.5rem;
+}
+
+.gate-mark {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.005em;
+}
+
+.gate-mark-mono {
+  color: var(--crimson);
+  font-weight: 600;
+  margin-right: 0.35rem;
 }
 
 .gate-form {
@@ -195,57 +341,61 @@ body {
 
 .gate-input {
   width: 220px;
-  padding: 0.65rem 0.85rem;
+  padding: 0.75rem 0.95rem;
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
-  color: var(--text);
+  color: var(--ink);
   outline: none;
   font-family: "Inter", sans-serif;
+  font-size: 1rem;
   transition: border-color 120ms ease;
 }
 
 .gate-input:focus {
-  border-color: var(--sage);
+  border-color: var(--crimson);
 }
 
 .gate-input::placeholder {
-  color: var(--placeholder);
+  color: var(--muted);
   font-style: italic;
 }
 
 .gate-button {
-  padding: 0.65rem 1.1rem;
-  background: var(--sage);
-  color: var(--bg);
-  border: 1px solid var(--sage);
+  padding: 0.75rem 1.25rem;
+  background: var(--crimson);
+  color: var(--cream);
+  border: 1px solid var(--crimson);
   border-radius: var(--radius-sm);
   cursor: pointer;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.1em;
   font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
   transition: background-color 120ms ease, border-color 120ms ease;
 }
 
 .gate-button:hover {
-  background: var(--sage-deep);
-  border-color: var(--sage-deep);
+  background: var(--crimson-deep);
+  border-color: var(--crimson-deep);
 }
 
 .gate-forget {
   position: absolute;
-  bottom: 1.25rem;
-  right: 1.5rem;
-  font-family: "Cormorant Garamond", serif;
+  bottom: 1.5rem;
+  right: 1.75rem;
+  font-family: "Inter", sans-serif;
   font-style: italic;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  opacity: 0.55;
+  font-size: 0.85rem;
+  color: var(--muted);
+  opacity: 0.6;
   border-bottom: none;
 }
 
 .gate-forget:hover {
   opacity: 1;
+  color: var(--ink);
   border-bottom: none;
 }
 
@@ -264,4 +414,20 @@ body {
 
 .gate-shake {
   animation: gate-shake 0.4s ease;
+}
+
+/* ---------- Footer / confidential strip ---------- */
+.confidential-strip {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
 }

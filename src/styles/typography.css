@@ -1,29 +1,54 @@
+/* Inter throughout, matching the Monument deck's sans-serif treatment. */
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
-  color: var(--text);
+  line-height: 1.55;
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+/* Display headings: italic Inter, large, near-black. Matches the deck's
+   "Membership Types", "Funding the Ranch in perpetuity." treatment. */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
   font-weight: 500;
-  line-height: 1.25;
-  color: var(--text);
-  margin: 2.25rem 0 0.85rem;
-  letter-spacing: 0.005em;
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 2.4rem 0 1rem;
+  letter-spacing: -0.005em;
 }
 
-h1 { font-size: 2.05rem; margin-top: 0.4rem; }
-h2 { font-size: 1.55rem; }
-h3 { font-size: 1.2rem; }
-h4 { font-size: 1.05rem; }
-h5, h6 { font-size: 0.95rem; color: var(--text-secondary); }
+h1 {
+  font-size: 3.1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 2.25rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+  margin-top: 1.8rem;
+}
+
+h5, h6 {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
 
 p, li {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.65;
 }
@@ -33,19 +58,20 @@ p {
 }
 
 a {
-  color: var(--sage);
+  color: var(--crimson);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 120ms ease, color 120ms ease;
 }
 
 a:hover {
-  border-bottom-color: var(--sage);
+  color: var(--crimson-deep);
+  border-bottom-color: var(--crimson-deep);
 }
 
 strong, b {
-  font-weight: 500;
-  color: var(--text);
+  font-weight: 600;
+  color: var(--ink);
 }
 
 em, i {
@@ -54,39 +80,84 @@ em, i {
 
 code, pre {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.88em;
+  font-size: 0.85em;
+  font-style: normal;
 }
 
 code {
-  background: var(--surface);
-  padding: 0.1em 0.35em;
-  border-radius: 3px;
+  background: var(--cream-soft);
+  border: 1px solid var(--border);
+  padding: 0.05em 0.35em;
+  border-radius: var(--radius-sm);
 }
 
 pre {
-  background: var(--surface);
-  padding: 0.85rem 1rem;
-  border-radius: var(--radius-sm);
-  overflow-x: auto;
-  line-height: 1.5;
+  background: var(--cream-soft);
+  padding: 0.9rem 1.1rem;
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  line-height: 1.55;
 }
 
 pre code {
   background: transparent;
+  border: 0;
   padding: 0;
 }
 
 blockquote {
-  margin: 1.25rem 0;
-  padding: 0.65rem 1.1rem;
-  border-left: 3px solid var(--sage);
-  color: var(--text-secondary);
+  margin: 1.5rem 0;
+  padding: 0.7rem 1.2rem;
+  border-left: 3px solid var(--crimson);
+  color: var(--ink);
   font-style: italic;
-  background: var(--surface);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--cream-soft);
 }
 
 blockquote p {
   margin: 0;
+}
+
+/* Section label (small caps crimson with letter-spacing). Matches deck's
+   "TODAY'S AGENDA", "PRIMARY", "$30M PERPETUAL OPERATIONAL SOLVENCY". */
+.eyebrow,
+.section-label {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--crimson);
+  margin: 0 0 0.85rem;
+}
+
+/* Stat number (large bold), matches "42", "50", "$30M". */
+.stat-number {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.stat-label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
+
+/* Subtitle (italic, smaller, deck pattern from "Perpetual Foundation Fund target.") */
+.subtitle {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin: 0 0 1rem;
 }

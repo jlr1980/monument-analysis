@@ -1,20 +1,27 @@
 :root {
-  /* Warm, grounded palette appropriate for the Monument analysis. */
-  --bg: #faf8f4;
-  --surface: #f3efe7;
-  --text: #2b2a26;
-  --text-secondary: #6b6862;
-  --border: #d9d3c8;
-  --placeholder: #a39e94;
+  /* Palette verified against Monument_Development_update_V2.pptx.pdf. */
+  --cream: #f5e9d2;
+  --cream-soft: #faf1dd;
+  --ink: #1a1a1a;
+  --ink-soft: #2b2b2b;
 
-  /* Accent colors -- sage for active tabs/links, terracotta for the call-to-action. */
-  --sage: #5f7a5a;
-  --sage-deep: #4a6346;
-  --terracotta: #a45a3c;
-  --warning: #b88a2c;
-  --danger: #a93a2d;
+  /* Accents */
+  --crimson: #e5251c;
+  --crimson-deep: #b91c1c;
 
-  --radius: 6px;
-  --radius-sm: 4px;
-  --content-max: 760px;
+  /* Emphasis-card backgrounds. Oxblood is the primary; navy is used for the
+     four-pillar treatment in the source deck. */
+  --oxblood: #1f0606;
+  --oxblood-soft: #2a0a0a;
+  --navy: #0b1a2a;
+
+  --muted: #6b6b6b;
+  --muted-on-dark: #a8a097;
+  --border: #d9cfb7;
+  --border-strong: #b8ad94;
+
+  --radius: 4px;
+  --radius-sm: 2px;
+  --content-max: 1040px;
+  --content-narrow: 760px;
 }
