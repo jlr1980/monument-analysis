@@ -42,15 +42,18 @@ const SUBSTRATE = [
   },
   {
     eyebrow: "Wildlife populations",
-    title: "UDWR April 2026 big game permit recommendations",
+    title: "UDWR 2026 big game permit recommendations (KSL coverage)",
+    href: "https://www.ksl.com/article/51476704/utah-requests-8-increase-in-its-largest-hunt-as-deer-populations-begin-to-recover",
     description:
-      "Statewide mule deer at 73 percent of management objective; statewide elk at or just above objective. Basis for the memo section 3.2 wildlife claim. (Canonical UDWR article URL not located; coverage in Cache Valley Daily and ABC4 confirms the recommendations and approval.)",
+      "Statewide mule deer at 73 percent of management objective with a 2026 recommendation to increase general-season buck permits by 8 percent as populations recover; statewide elk at or just above objective. Basis for the memo section 3.2 wildlife claim. (UDWR's own article URLs at wildlife.utah.gov rotate; the wildlife board materials page at wildlife.utah.gov/about-us/public-meetings.html is the stable hub.)",
   },
   {
     eyebrow: "Habitat damage",
-    title: "UDWR June 2024 wildlife board action on Ensign Ranches and four other CWMUs",
+    title:
+      "Utah Wildlife Board approval of additional antlerless elk permits on five CWMUs (Rocky Mountain Elk Foundation coverage)",
+    href: "https://www.rmef.org/media/utah-approves-more-elk-hunting-permits-for-over-objective-populations/",
     description:
-      "Wildlife board approved additional antlerless elk permits on five northern Utah CWMUs for over-objective elk populations causing long-term habitat damage. Source for memo section 3.2 management framing. (Canonical UDWR article URL not located.)",
+      "Wildlife board approved additional antlerless elk permits on five northern Utah CWMUs (including Ensign Ranches) for over-objective elk populations causing long-term habitat damage. The board action spans the June 2024 framework approval and the August 2024 permit-implementation vote. Source for memo section 3.2 management framing.",
   },
   {
     eyebrow: "CWMU regulation",
@@ -226,7 +229,7 @@ const TAX = [
       "Excelsior Aggregates, LLC v. Commissioner, T.C. Memo 2024-60 (Land Trust Alliance summary)",
     href: "https://landtrustalliance.org/resources/learn/explore/excelsior-aggregates-llc-v-commissioner",
     description:
-      "Tax Court ruled that the HBU of the parcels before the easement was silviculture, recreation, and limited residential use—not commercial sand and gravel mining as the appraiser claimed. Average deduction reduction across the three litigated cases was 88 percent. (Note: case is T.C. Memo 2024-60, not 2025 as listed in memo section 3.5; it sits in the same legal landscape as the three 2025 decisions.)",
+      "Tax Court ruled that the HBU of the parcels before the easement was silviculture, recreation, and limited residential use—not commercial sand and gravel mining as the appraiser claimed. Average deduction reduction across the three litigated cases was 88 percent. The earliest of the four recent decisions cited in memo section 3.5.",
   },
   {
     eyebrow: "Tax law change",
