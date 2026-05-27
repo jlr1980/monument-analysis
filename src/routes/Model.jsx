@@ -1,3 +1,5 @@
+import ModelInteractive from "../components/ModelInteractive.jsx";
+
 function ModelSection({ eyebrow, heading, children }) {
   return (
     <section className="model-section">
@@ -20,11 +22,14 @@ export default function Model() {
       <p>
         A parametric engine built for this analysis, separate from the
         team&rsquo;s pro forma. It powers the scenario writeups in the memo,
-        produces the deterministic outputs the deck cites, and serves as the
-        substrate the Monte Carlo iterates against. Partners can download the
-        workbook, change inputs, and re-derive the analysis the memo and deck
-        present.
+        produces the deterministic outputs, and serves as the substrate the
+        Monte Carlo iterates against. The interactive widget below runs a
+        simplified version of the engine in the browser; partners can change
+        inputs and watch outputs recompute. The full Excel workbook stays
+        available for download (Part 05) for exact reconciliation.
       </p>
+
+      <ModelInteractive />
 
       <ModelSection eyebrow="Part 01" heading="Engine architecture">
         <p>
