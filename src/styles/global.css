@@ -303,6 +303,27 @@ body {
   color: var(--crimson);
 }
 
+/* Headings inside dark cards: typography.css defaults them to ink; override
+   to cream so they remain readable on the oxblood/navy background. */
+.card-dark h1,
+.card-dark h2,
+.card-dark h3,
+.card-dark h4,
+.card-dark h5,
+.card-dark h6,
+.card-dark .section-heading,
+.card-dark .subsection-heading,
+.card-navy h1,
+.card-navy h2,
+.card-navy h3,
+.card-navy h4,
+.card-navy h5,
+.card-navy h6,
+.card-navy .section-heading,
+.card-navy .subsection-heading {
+  color: var(--cream);
+}
+
 .card-navy {
   background: var(--navy);
   color: var(--cream);
@@ -591,6 +612,67 @@ body {
   color: var(--ink-soft);
   margin: 0;
   max-width: 64ch;
+}
+
+/* ---------- Simulator page ---------- */
+.simulator-modes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+@media (min-width: 760px) {
+  .simulator-modes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.simulator-mode-card .source-eyebrow {
+  margin-top: 0;
+}
+
+.simulator-mode-card .source-title {
+  margin-top: 0;
+}
+
+.simulator-engine {
+  margin: 3rem 0 2.5rem;
+}
+
+.simulator-engine-card {
+  padding: 2.5rem 2.25rem 2.75rem;
+}
+
+.simulator-engine-card .section-eyebrow {
+  margin-bottom: 0.6rem;
+}
+
+.simulator-engine-card .section-heading {
+  margin: 0 0 1.25rem;
+}
+
+.simulator-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem 2rem;
+  margin: 1.75rem 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .simulator-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.simulator-stat .stat-number {
+  font-size: 2.4rem;
+  color: var(--cream);
+}
+
+.simulator-stat .stat-label {
+  color: var(--muted-on-dark);
+  margin-top: 0.45rem;
 }
 
 /* ---------- Footer / confidential strip ---------- */
