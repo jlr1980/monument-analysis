@@ -109,6 +109,42 @@ body {
   border-bottom-color: var(--crimson);
 }
 
+/* Visual divider between main tabs and supporting tabs (Sources, Change Log).
+   Signals that what follows is reference material, not part of the main flow. */
+.tab-divider {
+  display: inline-block;
+  width: 1px;
+  height: 1rem;
+  background: var(--border-strong);
+  align-self: center;
+}
+
+/* Supporting tabs: visually de-emphasized vs main tabs. Slightly smaller,
+   lower contrast, and active state uses ink rather than crimson so the
+   crimson accent stays reserved for the primary content tabs. */
+.tab.tab-supporting {
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.tab.tab-supporting:hover {
+  color: var(--ink-soft);
+  opacity: 1;
+  border-bottom-color: transparent;
+}
+
+.tab.tab-supporting.active {
+  color: var(--ink);
+  border-bottom-color: var(--ink-soft);
+  opacity: 1;
+}
+
+.tab.tab-supporting.active:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink-soft);
+}
+
 /* ---------- Markdown page (memo, deck, changelog, route content) ---------- */
 .markdown-page {
   max-width: var(--content-narrow);

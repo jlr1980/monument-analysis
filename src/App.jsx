@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import PasswordGate from "./components/PasswordGate.jsx";
 import Header from "./components/Header.jsx";
+import StartHere from "./routes/StartHere.jsx";
 import Memo from "./routes/Memo.jsx";
-import Deck from "./routes/Deck.jsx";
 import Model from "./routes/Model.jsx";
 import Simulator from "./routes/Simulator.jsx";
 import Sources from "./routes/Sources.jsx";
@@ -20,8 +20,8 @@ function useHashRoute() {
 }
 
 const VIEW_FOR_ROUTE = {
+  [ROUTES.startHere]: <StartHere />,
   [ROUTES.memo]: <Memo />,
-  [ROUTES.deck]: <Deck />,
   [ROUTES.model]: <Model />,
   [ROUTES.simulator]: <Simulator />,
   [ROUTES.sources]: <Sources />,

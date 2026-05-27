@@ -1,13 +1,15 @@
+// Route slugs. startHere uses an empty string so the landing URL is
+// jlr1980.github.io/monument-analysis/ with no hash suffix.
 export const ROUTES = {
+  startHere: "",
   memo: "memo",
-  deck: "deck",
   model: "model",
   simulator: "simulator",
   sources: "sources",
   changelog: "changelog",
 };
 
-const DEFAULT_ROUTE = ROUTES.memo;
+const DEFAULT_ROUTE = ROUTES.startHere;
 
 export function readHash(hash) {
   if (!hash) return "";
