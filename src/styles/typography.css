@@ -1,0 +1,92 @@
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text);
+  margin: 2.25rem 0 0.85rem;
+  letter-spacing: 0.005em;
+}
+
+h1 { font-size: 2.05rem; margin-top: 0.4rem; }
+h2 { font-size: 1.55rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.05rem; }
+h5, h6 { font-size: 0.95rem; color: var(--text-secondary); }
+
+p, li {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--sage);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+a:hover {
+  border-bottom-color: var(--sage);
+}
+
+strong, b {
+  font-weight: 500;
+  color: var(--text);
+}
+
+em, i {
+  font-style: italic;
+}
+
+code, pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.88em;
+}
+
+code {
+  background: var(--surface);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--surface);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  line-height: 1.5;
+  border: 1px solid var(--border);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.65rem 1.1rem;
+  border-left: 3px solid var(--sage);
+  color: var(--text-secondary);
+  font-style: italic;
+  background: var(--surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+blockquote p {
+  margin: 0;
+}

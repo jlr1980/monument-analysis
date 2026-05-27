@@ -1,0 +1,20 @@
+:root {
+  /* Warm, grounded palette appropriate for the Monument analysis. */
+  --bg: #faf8f4;
+  --surface: #f3efe7;
+  --text: #2b2a26;
+  --text-secondary: #6b6862;
+  --border: #d9d3c8;
+  --placeholder: #a39e94;
+
+  /* Accent colors -- sage for active tabs/links, terracotta for the call-to-action. */
+  --sage: #5f7a5a;
+  --sage-deep: #4a6346;
+  --terracotta: #a45a3c;
+  --warning: #b88a2c;
+  --danger: #a93a2d;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --content-max: 760px;
+}
