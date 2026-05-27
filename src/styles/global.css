@@ -126,6 +126,105 @@ body {
   margin: 3rem 0;
 }
 
+/* Section block (h2 with section-number prefix; detected in MarkdownPage.jsx). */
+.section-block {
+  margin: 4.5rem 0 1.5rem;
+}
+
+.section-block:first-child,
+.markdown-page > .section-block:first-of-type {
+  margin-top: 1rem;
+}
+
+.section-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--crimson);
+  margin-bottom: 0.9rem;
+}
+
+.section-heading {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+/* Subsection block (h3 with subsection-number prefix like 1.1, 6.2). */
+.subsection-block {
+  margin: 2.75rem 0 1rem;
+}
+
+.subsection-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--crimson);
+  margin-bottom: 0.45rem;
+}
+
+.subsection-heading {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--ink);
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Blockquote → oxblood card (the April 30 admission and similar). */
+.markdown-page blockquote {
+  background: var(--oxblood);
+  color: var(--cream);
+  border-left: none;
+  padding: 1.85rem 2.1rem;
+  border-radius: var(--radius);
+  margin: 2.5rem 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.markdown-page blockquote p {
+  color: var(--cream);
+  margin: 0 0 0.75rem;
+}
+
+.markdown-page blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Closing section breathing room: extra margin around the final hr,
+   slightly larger paragraph type after it, crimson italic sign-off. */
+.markdown-page hr:last-of-type {
+  margin: 4.5rem 0 3rem;
+  border-top: 1px solid var(--border-strong);
+}
+
+.markdown-page hr:last-of-type ~ p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.markdown-page hr:last-of-type ~ p:last-of-type {
+  margin-top: 2.5rem;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--crimson);
+}
+
 /* Tables: clean, small caps headers in muted ink, subtle row dividers in border-color.
    Matches the deck's table treatment. */
 .markdown-page table {
