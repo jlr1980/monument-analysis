@@ -11,7 +11,7 @@ async function sha256Hex(input) {
 
 export default function PasswordGate({ children }) {
   const [unlocked, setUnlocked] = useState(
-    () => localStorage.getItem(STORAGE_KEYS.unlocked) === "true"
+    () => sessionStorage.getItem(STORAGE_KEYS.unlocked) === "true"
   );
   const [value, setValue] = useState("");
   const [shake, setShake] = useState(false);
@@ -22,7 +22,7 @@ export default function PasswordGate({ children }) {
     e.preventDefault();
     const hash = await sha256Hex(value);
     if (hash === PASSWORD_HASH) {
-      localStorage.setItem(STORAGE_KEYS.unlocked, "true");
+      sessionStorage.setItem(STORAGE_KEYS.unlocked, "true");
       setUnlocked(true);
     } else {
       setShake(true);
@@ -33,7 +33,7 @@ export default function PasswordGate({ children }) {
 
   const onForget = (e) => {
     e.preventDefault();
-    localStorage.removeItem(STORAGE_KEYS.unlocked);
+    sessionStorage.removeItem(STORAGE_KEYS.unlocked);
     setUnlocked(false);
     setValue("");
   };

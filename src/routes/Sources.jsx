@@ -35,21 +35,22 @@ function SourceGroup({ eyebrow, heading, intro, items }) {
 const SUBSTRATE = [
   {
     eyebrow: "Snowpack",
-    title: "USU Janet Quinney Lawson Institute annual report",
+    title: "USU Janet Quinney Lawson Institute, 2024 Report to the Governor: Utah’s Snowpack in Decline",
+    href: "https://www.usu.edu/ilwa/reports/2024/water/2e-snowpack",
     description:
-      "Source for peak Utah snowpack declining 16 percent since 1979, cited in memo section 3.2. Also documents the Powder Mountain SNOTEL site installed at the Weber and Bear headwaters in 2022 because the hydrology warrants continuous measurement.",
+      "Source for peak Utah snowpack declining 16 percent since 1979, cited in memo section 3.2. Documents the Powder Mountain SNOTEL site installed at the Weber and Bear headwaters in 2022 because the hydrology warrants continuous measurement.",
   },
   {
     eyebrow: "Wildlife populations",
-    title: "UDWR April 2026 permit recommendations",
+    title: "UDWR April 2026 big game permit recommendations",
     description:
-      "Statewide mule deer at 73 percent of management objective; statewide elk at or just above objective. Basis for the memo section 3.2 wildlife claim.",
+      "Statewide mule deer at 73 percent of management objective; statewide elk at or just above objective. Basis for the memo section 3.2 wildlife claim. (Canonical UDWR article URL not located; coverage in Cache Valley Daily and ABC4 confirms the recommendations and approval.)",
   },
   {
     eyebrow: "Habitat damage",
-    title: "UDWR June 2024 wildlife board action on Ensign Ranches",
+    title: "UDWR June 2024 wildlife board action on Ensign Ranches and four other CWMUs",
     description:
-      "Wildlife board approved additional antlerless elk permits on Ensign Ranches and four other northern Utah CWMUs for “long-term habitat damage from overgrazing” affecting struggling deer populations. Source for memo section 3.2 management framing.",
+      "Wildlife board approved additional antlerless elk permits on five northern Utah CWMUs for over-objective elk populations causing long-term habitat damage. Source for memo section 3.2 management framing. (Canonical UDWR article URL not located.)",
   },
   {
     eyebrow: "CWMU regulation",
@@ -61,105 +62,116 @@ const SUBSTRATE = [
   {
     eyebrow: "Heli-skiing disturbance",
     title: "Gill et al. 2025, Journal of Wildlife Management",
+    href: "https://wildlife.onlinelibrary.wiley.com/doi/full/10.1002/jwmg.70042",
     description:
-      "Documents caribou home-range expansion during the COVID reduction in heli-skiing operations. Source for the memo section 3.6 claim that mechanized recreation is a restrictor of ungulate movement.",
+      "Mapping interactions between winter recreationists and an endangered ungulate. Documents caribou home-range expansion during the COVID reduction in heli-skiing operations in British Columbia. Source for memo section 3.6.",
   },
   {
     eyebrow: "Elk flight distance",
-    title: "Cassirer et al. 1992",
+    title:
+      "Cassirer, Freddy, and Ables 1992, Wildlife Society Bulletin 20:375–381",
     description:
-      "Elk in low-disturbance areas flee 1,675 meters from a skier; habituated elk flee 40 meters. Source for the memo section 3.6 habituation argument.",
+      "Elk responses to disturbance by cross-country skiers in Yellowstone National Park; elk fled further and more frequently from off-trail skiers than from on-trail skiers. Cited for the habituation argument in memo section 3.6. (Canonical URL not located; print-archived journal.)",
   },
   {
     eyebrow: "Alpine winter recreation",
     title: "Rixen and Rolando 2013 meta-analysis",
     description:
-      "Alpine fauna richness, abundance, and diversity are lower in areas affected by winter recreation than in undisturbed areas. Supporting reference for memo section 3.6.",
+      "Alpine fauna richness, abundance, and diversity lower in areas affected by winter recreation than in undisturbed areas. Supporting reference for memo section 3.6. (Canonical URL not located.)",
   },
   {
     eyebrow: "Elk road avoidance",
-    title: "Sawyer et al. 2007, Wyoming",
+    title:
+      "Sawyer et al. 2007, Journal of Wildlife Management 71:868–874",
     description:
-      "Peak elk use occurs 2.8 km from major roads in summer, 1.2 km in winter; road density depresses use of the broader landscape, not just road-adjacent strips. Supporting reference for memo section 3.2.",
+      "Peak elk use occurs 2.8 km from major roads in summer, 1.2 km in winter; road density depresses use of the broader landscape, not just road-adjacent strips. Supporting reference for memo section 3.2. (Canonical URL not located.)",
   },
   {
     eyebrow: "Road density threshold",
-    title: "TRCP and Colorado Parks and Wildlife 2022",
+    title: "TRCP and Colorado Parks and Wildlife, 2022",
     description:
-      "Threshold of one linear mile of route per square mile of habitat above which big-game habitat security degrades. Primary source for the road density math in memo section 3.2.",
+      "Threshold of one linear mile of route per square mile of habitat, above which big-game habitat security degrades. Primary source for the road density math in memo section 3.2. (Canonical URL not located on the TRCP website; the threshold is widely cited in subsequent wildlife agency guidance.)",
   },
   {
     eyebrow: "Grazing standard",
     title: "USFS Wasatch-Cache 2003 Revised Forest Plan, Standard S26",
     description:
-      "Maximum 50 percent of current year’s growth on woody vegetation in big-game winter range and riparian areas. Benchmark used to evaluate the 4,000-head sheep operation noted in the deck.",
+      "Maximum 50 percent of current year’s growth on woody vegetation in big-game winter range and riparian areas. Benchmark for the 4,000-head sheep operation. (Canonical URL not located.)",
   },
   {
     eyebrow: "Grazing comparable",
     title: "USU Extension case study, Osguthorpe sheep operation",
     description:
-      "3,000-head Osguthorpe sheep operation in Snyderville Basin on 4,000 private acres plus federal grazing permits. Reference point for Monument’s 4,000-head, 15,000-acre stocking rate.",
+      "3,000-head Osguthorpe sheep operation in Snyderville Basin on 4,000 private acres plus federal grazing permits. Reference point for Monument’s 4,000-head, 15,000-acre stocking rate. (Canonical URL not located.)",
   },
   {
     eyebrow: "Dark sky ordinance",
-    title: "Weber County Outdoor Lighting Ordinance (2000, updated 2017)",
+    title: "Weber County Outdoor Lighting Ordinance",
+    href: "https://www.webercountyutah.gov/planning/outdoor_lighting.php",
     description:
-      "Utah’s first dark-sky ordinance, requires fully shielded, downward-focused outdoor lighting for all new construction. Basis for the lumens budget calculation in memo section 3.2.",
+      "Utah’s first dark-sky ordinance (2000, updated 2017). Requires fully shielded, downward-focused outdoor lighting for new construction. Basis for the lumens budget calculation in memo section 3.2.",
   },
   {
     eyebrow: "Dark sky asset",
-    title: "DarkSky International, North Fork Park designation (2015)",
+    title: "DarkSky International, North Fork Park",
+    href: "https://darksky.org/places/north-fork-park-dark-sky-park/",
     description:
-      "North Fork Park, immediately adjacent to Monument, designated an International Dark Sky Park in 2015. One of the only IDA-designated parks within two hours of a major urban center.",
+      "North Fork Park, immediately adjacent to Monument, designated an International Dark Sky Park in April 2015. One of the only IDA-designated parks within two hours of a major urban center.",
   },
   {
     eyebrow: "Water allocation",
     title: "Weber Basin Water Conservancy District, Replacement Water Program",
+    href: "https://www.weberbasin.gov/CustomerService/ReplacementWater",
     description:
-      "Anyone developing a new well in the Weber Basin must contract with WBWCD to release storage rights downstream to replace the groundwater they extract. Binding regulatory constraint for memo section 3.7.",
+      "Anyone developing a new well in the Weber Basin must contract with WBWCD to release storage rights downstream to replace the groundwater extracted. Binding regulatory constraint for memo section 3.7.",
   },
   {
     eyebrow: "Ground-water policy",
     title: "Utah State Engineer, interim Ground-water Management Plan for Ogden Valley",
     description:
-      "Regulatory framework governing new well permits in the Ogden Valley, under which Monument’s water needs must be met. Basis for memo section 3.7.",
+      "Regulatory framework governing new well permits in the Ogden Valley. Basis for memo section 3.7. (Canonical URL not located.)",
   },
   {
     eyebrow: "Water rights jurisdiction",
     title: "Utah Division of Water Rights, Areas 25 and 35",
     description:
-      "Monument’s parcels straddle two water rights administrative areas: Weber/Ogden River (Area 35) and Bear/Cache Valley (Area 25). Source for the multi-jurisdictional water claim in memo section 3.7.",
+      "Monument’s parcels straddle two water rights administrative areas: Weber/Ogden River (Area 35) and Bear/Cache Valley (Area 25). Source for the multi-jurisdictional water claim in memo section 3.7. (Canonical URL not located.)",
   },
 ];
 
 const ZONING = [
   {
     eyebrow: "FR-40 occupancy rule",
-    title: "Cache County Code, Title 17.10.030.B",
+    title: "Cache County Code Ordinance 2013-06, Title 17.10.030.B",
+    href: "https://www.cachecounty.gov/assets/department/zoning/code%20amendment/Title17/ZoningDistricts/Ord%202013-06%20Exhibits.pdf",
     description:
-      "FR-40 (Forest Recreation 40) zoning prohibits year-round residences and limits dwelling occupancy to 180 days per year. Cited in 2013 Ordinance Amendment Ord. 2013-06. Primary source for memo section 3.3.",
+      "FR-40 (Forest Recreation 40) zoning prohibits year-round residences and limits dwelling occupancy to 180 days per year. Primary source for memo section 3.3.",
   },
   {
     eyebrow: "Precedent rezone",
-    title: "Powder Mountain Cache County rezone, February 25, 2025",
+    title: "Powder Mountain Cache County rezone, February 25, 2025 (Salt Lake Tribune)",
+    href: "https://www.sltrib.com/news/environment/2025/02/25/powder-mountain-wants-cache-county/",
     description:
-      "Cache County Council voted 4-3 to rezone 1,621 Powder Mountain acres from FR-40 to Resort Recreation. One vote either way. Source for the procedural-risk framing in memo section 3.3.",
+      "Cache County Council voted 4-3 to rezone 1,621 Powder Mountain acres from FR-40 to Resort Recreation. Source for the procedural-risk framing in memo section 3.3.",
   },
   {
     eyebrow: "Referendum precedent",
     title: "Wasatch Peaks Ranch litigation, Morgan County (2019–2024)",
     description:
-      "Original 2019 rezone challenged by a five-resident referendum petition; county clerk rejected the petition; four years of litigation followed. Reported in KSL.com, Salt Lake Tribune, Standard-Examiner. Source for the referendum-risk argument in memo section 3.3.",
+      "Original 2019 rezone challenged by a five-resident referendum petition; county clerk rejected the petition; four years of litigation followed. Multiple media outlets covered the dispute (KSL.com, Salt Lake Tribune, Standard-Examiner). Source for the referendum-risk argument in memo section 3.3.",
   },
   {
     eyebrow: "WPR injunction",
-    title: "Judge Noel Hyde preliminary injunction, December 2023",
+    title:
+      "Judge Noel Hyde preliminary injunction, December 8, 2023 (Salt Lake Tribune)",
+    href: "https://www.sltrib.com/news/environment/2023/12/08/constitutional-rights-are-not-sale/",
     description:
-      "Halted all Wasatch Peaks Ranch construction. The ruling included the line “Constitutional rights are not for sale.” Source for the timeline-risk claim in memo section 3.3.",
+      "Halted all Wasatch Peaks Ranch construction with the ruling “Constitutional rights are not for sale.” Source for the timeline-risk claim in memo section 3.3.",
   },
   {
     eyebrow: "WPR settlement",
-    title: "Wasatch Peaks Ranch settlement, January 2024",
+    title: "Wasatch Peaks Ranch settlement, January 2024 (Salt Lake Tribune)",
+    href: "https://www.sltrib.com/news/environment/2024/01/26/wasatch-peaks-ranch-resort-morgan/",
     description:
       "2,300-acre conservation easement plus undisclosed funding commitment to Morgan County resident projects, after $92M raised and ski lifts built during the litigation. Source for the sunk-cost framing in memo section 3.3.",
   },
@@ -167,68 +179,82 @@ const ZONING = [
     eyebrow: "State constitution",
     title: "Utah Constitution, referendum rights",
     description:
-      "Utah residents may petition to put a county-council legislative action to public referendum. The legal mechanism underlying the WPR precedent and the procedural risk Monument inherits.",
+      "Utah residents may petition to put a county-council legislative action to public referendum. The legal mechanism underlying the WPR precedent and the procedural risk Monument inherits. (Canonical URL not located.)",
   },
 ];
 
 const TAX = [
   {
     eyebrow: "Federal tax code",
-    title: "IRC §170(h), qualified conservation contributions",
+    title: "IRC §170, Charitable contributions and gifts (Cornell Law LII)",
+    href: "https://www.law.cornell.edu/uscode/text/26/170",
     description:
-      "Statutory framework for deductible conservation contributions. Basis for the team’s structural choice to organize Monument’s Foundation outside §170(h) as a non-easement charitable contribution to a POF.",
+      "Statutory framework for charitable deductions including §170(h) qualified conservation contributions. Basis for the team’s structural choice to organize Monument’s Foundation outside §170(h) as a non-easement charitable contribution to a POF.",
   },
   {
     eyebrow: "Partnership deduction cap",
-    title: "IRC §170(h)(7), 2.5x rule",
+    title: "IRC §170(h)(7), the 2.5x rule for partnerships (Cornell Law LII)",
+    href: "https://www.law.cornell.edu/uscode/text/26/170#h_7",
     description:
       "If a §170(h) contribution by a partnership exceeds 2.5 times the sum of each member’s relevant basis, the deduction is statutorily disallowed. Source for the structural analysis in memo section 3.5.",
   },
   {
     eyebrow: "Tax court (2025)",
-    title: "Beaverdam Creek Holdings, T.C. Memo 2025-53",
+    title: "Beaverdam Creek Holdings, LLC v. Commissioner, T.C. Memo 2025-53",
+    href: "https://www.leagle.com/decision/intco20250602d04",
     description:
-      "Court accepted the highest-and-best-use but rejected the DCF yield-plan methodology as “fantasy economics,” reducing a $22M deduction to under $200K. Source for the HBU vulnerability claim in memo section 3.5.",
+      "Court accepted the highest-and-best-use but rejected the DCF yield-plan methodology, reducing a $22M deduction to $193,250 (over a $335,500 easement value). Source for the HBU vulnerability claim in memo section 3.5. Practitioner coverage in The Tax Adviser and Current Federal Tax Developments.",
   },
   {
     eyebrow: "Tax court (2025)",
-    title: "Ranch Springs, 164 T.C. No. 6",
+    title:
+      "Ranch Springs, LLC v. Commissioner, 164 T.C. No. 6 (March 31, 2025)",
+    href: "https://www.currentfederaltaxdevelopments.com/blog/2025/3/31/ranch-springs-llc-v-commissioner-a-case-study-in-the-valuation-of-conservation-easements-and-the-pitfalls-of-aggressive-tax-planning",
     description:
-      "Rejected DCF yield-plan valuation of a conservation deduction as speculative. Supporting precedent for memo section 3.5.",
+      "Rejected a $25.8M conservation easement valuation; court applied comparable-sales method and concluded the easement value was $335,500. The court found no reasonable probability that agricultural land could be rezoned for the proposed limestone-quarry use. Supporting precedent for memo section 3.5.",
   },
   {
     eyebrow: "Tax court (2025)",
-    title: "Jackson Stone South, T.C. Memo 2025-96",
+    title: "Jackson Stone South, LLC v. Commissioner, T.C. Memo 2025-96",
+    href: "https://www.currentfederaltaxdevelopments.com/blog/2025/9/23/tax-court-again-not-impressed-with-a-syndicated-conservation-easement-transaction",
     description:
-      "Court “dismantled” the structure on similar grounds. Third of the four 2025 Tax Court decisions cited in memo section 3.5.",
+      "Court disallowed one $19M easement deduction entirely (Jackson Stone North, for failure to comply with Treasury regulations) and reduced a second $19M deduction (Jackson Stone South) to $460,000. Supporting precedent for memo section 3.5.",
   },
   {
-    eyebrow: "Tax court (2025)",
-    title: "Excelsior Aggregates",
+    eyebrow: "Tax court (2024)",
+    title:
+      "Excelsior Aggregates, LLC v. Commissioner, T.C. Memo 2024-60 (Land Trust Alliance summary)",
+    href: "https://landtrustalliance.org/resources/learn/explore/excelsior-aggregates-llc-v-commissioner",
     description:
-      "Fourth 2025 Tax Court decision rejecting DCF-based yield-plan valuation. Completes the precedent set cited in memo section 3.5.",
+      "Tax Court ruled that the HBU of the parcels before the easement was silviculture, recreation, and limited residential use—not commercial sand and gravel mining as the appraiser claimed. Average deduction reduction across the three litigated cases was 88 percent. (Note: case is T.C. Memo 2024-60, not 2025 as listed in memo section 3.5; it sits in the same legal landscape as the three 2025 decisions.)",
   },
   {
     eyebrow: "Tax law change",
-    title: "OBBBA 2026, effective January 1, 2026",
+    title:
+      "One Big Beautiful Bill Act (OBBBA) of 2026, charitable deduction changes",
+    href: "https://taxfoundation.org/blog/charitable-deduction-big-beautiful-bill/",
     description:
-      "35 percent cap on top-bracket itemized deductions versus the 37 percent marginal rate, plus a 0.5 percent AGI floor on charitable deductions. Combined effect is roughly a 10 percent reduction in tax benefit. Source for memo section 3.5 OBBBA claim.",
+      "Effective January 1, 2026: 35 percent cap on top-bracket itemized deductions versus the 37 percent marginal rate, plus a 0.5 percent AGI floor on charitable deductions. Combined effect is roughly a 10 percent reduction in tax benefit. Source for memo section 3.5.",
   },
   {
     eyebrow: "POF qualification",
-    title: "IRC §4942, Private Operating Foundation requirements",
+    title:
+      "IRC §4942, Taxes on failure to distribute income (Cornell Law LII)",
+    href: "https://www.law.cornell.edu/uscode/text/26/4942",
     description:
-      "Requires 85 percent of adjusted net income spent on direct charitable activities (income test) plus one of: assets test, endowment test, or support test. Source for the POF qualification framing in memo section 3.5.",
+      "Private Operating Foundation requirements: 85 percent of adjusted net income spent on direct charitable activities (income test), plus one of: assets test, endowment test, or support test. Source for the POF qualification framing in memo section 3.5.",
   },
   {
     eyebrow: "POF prohibition",
-    title: "IRC §4941, self-dealing",
+    title: "IRC §4941, Self-dealing (Cornell Law LII)",
+    href: "https://www.law.cornell.edu/uscode/text/26/4941",
     description:
       "Prohibits self-dealing between a private foundation and disqualified persons. Relevant to member-dues / Foundation-services quid-pro-quo questions raised in memo section 3.5.",
   },
   {
     eyebrow: "IRS publication",
     title: "IRS Publication 526, Charitable Contributions",
+    href: "https://www.irs.gov/forms-pubs/about-publication-526",
     description:
       "General guidance on deductibility of charitable contributions, including the 2.5x rule for partnerships and POF treatment.",
   },
@@ -237,40 +263,41 @@ const TAX = [
     title:
       "Treasury final regulations on Syndicated Conservation Easement transactions, October 2024",
     description:
-      "Identified SCETs as “listed transactions” requiring disclosure; the rules exempt some fee-simple structures from the listed-transaction designation while preserving underlying valuation scrutiny.",
+      "Identified SCETs as listed transactions requiring disclosure; the rules exempt some fee-simple structures from the listed-transaction designation while preserving underlying valuation scrutiny. (Canonical regulation URL not located.)",
   },
   {
     eyebrow: "Practitioner commentary",
-    title: "Chamberlain Hrdlicka tax counsel publications on IRS enforcement",
+    title: "Chamberlain Hrdlicka publications on IRS enforcement of conservation easements",
     description:
-      "Published analysis noting that the IRS approach in recent SCET and fee-simple cases is to fully disallow charitable deductions on donative-intent and HBU grounds, regardless of structure.",
+      "Published analysis noting that the IRS approach in recent SCET and fee-simple cases is to fully disallow charitable deductions on donative-intent and HBU grounds, regardless of structure. (Specific article URL not located.)",
   },
 ];
 
 const COMPARABLES = [
   {
     eyebrow: "Comparable — YC",
-    title: "Yellowstone Club operating history",
+    title: "Yellowstone Club (Wikipedia)",
+    href: "https://en.wikipedia.org/wiki/Yellowstone_Club",
     description:
-      "750 households on 15,200 acres; same master planner (Hart Howerton) and architect (Kip Halverson) as Monument; 20 percent conservation footprint versus Monument’s proposed 80 percent. Founded 2000, bankrupt 2008, acquired by CrossHarbor 2009. Source for the scale comparison in memo section 5.6. Reporting from Wikipedia, YC Environmental Stewardship reports, CrossHarbor / Lone Mountain Land Company.",
+      "Founded 1997 by Tim Blixseth; bankrupt November 2008 with $343M in debt; acquired by CrossHarbor in 2009 for $115M. Same master planner (Hart Howerton) and architect (Kip Halverson) as Monument; 20 percent conservation footprint versus Monument’s proposed 80 percent. Source for the scale comparison in memo section 5.6.",
   },
   {
     eyebrow: "Comparable — WPR",
     title: "Wasatch Peaks Ranch (Morgan County, Utah)",
     description:
-      "750 households on 12,700 acres, 30 minutes south of Monument; zero original conservation footprint. Same scale, adjacent geography, same procedural-risk profile. Source for memo sections 3.3 and 3.8.",
+      "750 households on 12,700 acres, 30 minutes south of Monument; zero original conservation footprint. Same scale, adjacent geography, same procedural-risk profile. Coverage in the entries above. Source for memo sections 3.3 and 3.8.",
   },
   {
     eyebrow: "Comparable — WR",
     title: "Whisper Ridge prior operations",
     description:
-      "Monument is the rebranded Whisper Ridge property. WR ran heli/cat skiing on roughly 70,000 acres of private tenure, founded by Dan Lockwood in 2015, exited operations after running heli/cat as a profit center failed economically. Sources: PRNewswire 2018, Ski Mag coverage, First Tracks Online, and confirmation from Jeff Reece.",
+      "Monument is the rebranded Whisper Ridge property. WR ran heli/cat skiing on roughly 70,000 acres of private tenure, founded by Dan Lockwood in 2015, exited operations after running heli/cat as a profit center failed economically. Sources: PRNewswire 2018, Ski Mag, First Tracks Online, and confirmation from Jeff Reece. (No single canonical URL.)",
   },
   {
     eyebrow: "Adjacent institutional asset",
     title: "Powder Mountain and Powder Haven (Reed Hastings acquisition)",
     description:
-      "Hastings’s acquisition of Powder Mountain and its conversion to Powder Haven gives Monument institutional underwriting of the ski amenity for the asset’s full economic life. Source for memo section 1.4.",
+      "Hastings’s acquisition of Powder Mountain and its conversion to Powder Haven gives Monument institutional underwriting of the ski amenity for the asset’s full economic life. Source for memo section 1.4. (See the Powder Mountain rezone entry above for the Cache County coverage.)",
   },
 ];
 
@@ -297,7 +324,7 @@ const TEAM_DOCS = [
     eyebrow: "Internal — research compilation",
     title: "Monument Rigor Consolidated Reference (May 4, 2026)",
     description:
-      "The project’s internal research compilation underlying the research blocks. Roughly 24 pages of source citations and context, stored in the project archive.",
+      "The project’s internal research compilation underlying the five research blocks. Roughly 24 pages of source citations and context, stored in the project archive.",
   },
 ];
 
@@ -329,9 +356,10 @@ export default function Sources() {
       <p>
         This index organizes the sources behind the memo&rsquo;s empirical
         claims, grouped by topic. Each entry pairs a brief description with a
-        link where one exists; project-internal documents are marked as such.
-        The memo&rsquo;s citations and the engine&rsquo;s assumptions trace
-        back to this set.
+        link where one was located; project-internal documents are marked as
+        such, and sources without a canonical online URL are noted
+        explicitly. The memo&rsquo;s citations and the engine&rsquo;s
+        assumptions trace back to this set.
       </p>
 
       <SourceGroup
@@ -351,7 +379,7 @@ export default function Sources() {
       <SourceGroup
         eyebrow="Part 03"
         heading="Tax law and IRS precedent"
-        intro="Sources for memo section 3.5 (tax timing and POF determination). Federal tax code, the four 2025 Tax Court decisions on DCF yield-plan valuations, OBBBA 2026 provisions, and the POF qualification framework."
+        intro="Sources for memo section 3.5 (tax timing and POF determination). Federal tax code, the four Tax Court decisions on DCF yield-plan valuations, OBBBA 2026 provisions, and the POF qualification framework."
         items={TAX}
       />
 
