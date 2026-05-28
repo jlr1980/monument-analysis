@@ -1,11 +1,5 @@
 # Monument memo
 
-To: The Monument Ranch Club partnership
-From: Jeff Reece
-Date: May 28, 2026
-
----
-
 The partnership is being asked to commit $20M to a 50-year asset. I spent time with the deck, the pro forma, and the meeting notes, and built a parametric engine to test the scenarios more rigorously than I could otherwise. This memo summarizes what I found and what I think is worth the partnership talking through together.
 
 Before the analysis: the team is strong, the master plan is materially better than Yellowstone Club or Wasatch Peaks Ranch at the same scale, the Foundation as a Private Operating Foundation is creative tax and stewardship engineering, and the Powder Haven adjacency is a real structural advantage. The team has been transparent with us throughout, which is what made this analysis possible.

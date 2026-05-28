@@ -1,11 +1,5 @@
 # Start here
 
-To: The Monument Ranch Club partnership
-From: Jeff Reece
-Date: May 28, 2026
-
----
-
 ## What this is
 
 I spent time with the deck, the pro forma, and the meeting notes for the proposed $20M equity round. To test the four scenarios more rigorously than I could otherwise, I built a parametric financial engine and ran a Monte Carlo simulation against it. This hub presents what I found.
@@ -48,7 +42,7 @@ The **Memo** is the full analysis. Three sections: the conceptual frame, eight o
 
 The **Model** is the parametric financial engine that produced the deterministic scenario numbers. Editable inputs, live outputs. Useful for testing your own assumptions. The full Excel workbook is also available for download.
 
-The **Simulator** is the Monte Carlo layer that produced the survival and objective rates. Three modes: named scenarios with their distributions, distribution variants for testing assumptions, and custom configurations with design parameter sliders.
+The **Simulator** is the Monte Carlo layer that produced the survival and objective rates. Two modes: named scenarios with their pre-computed distributions, and custom configurations you can run live against your own inputs.
 
 **Supporting material.** Sources, Change Log.
 

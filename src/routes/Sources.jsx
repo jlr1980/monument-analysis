@@ -229,7 +229,7 @@ const TAX = [
       "Excelsior Aggregates, LLC v. Commissioner, T.C. Memo 2024-60 (Land Trust Alliance summary)",
     href: "https://landtrustalliance.org/resources/learn/explore/excelsior-aggregates-llc-v-commissioner",
     description:
-      "Tax Court ruled that the HBU of the parcels before the easement was silviculture, recreation, and limited residential use—not commercial sand and gravel mining as the appraiser claimed. Average deduction reduction across the three litigated cases was 88 percent. The earliest of the four recent decisions cited in memo section 3.5.",
+      "Tax Court ruled that the HBU of the parcels before the easement was silviculture, recreation, and limited residential use, not commercial sand and gravel mining as the appraiser claimed. Average deduction reduction across the three litigated cases was 88 percent. The earliest of the four recent decisions cited in memo section 3.5.",
   },
   {
     eyebrow: "Tax law change",
@@ -278,20 +278,20 @@ const TAX = [
 
 const COMPARABLES = [
   {
-    eyebrow: "Comparable — YC",
+    eyebrow: "Comparable (YC)",
     title: "Yellowstone Club (Wikipedia)",
     href: "https://en.wikipedia.org/wiki/Yellowstone_Club",
     description:
       "Founded 1997 by Tim Blixseth; bankrupt November 2008 with $343M in debt; acquired by CrossHarbor in 2009 for $115M. Same master planner (Hart Howerton) and architect (Kip Halverson) as Monument; 20 percent conservation footprint versus Monument’s proposed 80 percent. Source for the scale comparison in memo section 5.6.",
   },
   {
-    eyebrow: "Comparable — WPR",
+    eyebrow: "Comparable (WPR)",
     title: "Wasatch Peaks Ranch (Morgan County, Utah)",
     description:
       "750 households on 12,700 acres, 30 minutes south of Monument; zero original conservation footprint. Same scale, adjacent geography, same procedural-risk profile. Coverage in the entries above. Source for memo sections 3.3 and 3.8.",
   },
   {
-    eyebrow: "Comparable — WR",
+    eyebrow: "Comparable (WR)",
     title: "Whisper Ridge prior operations",
     description:
       "Monument is the rebranded Whisper Ridge property. WR ran heli/cat skiing on roughly 70,000 acres of private tenure, founded by Dan Lockwood in 2015, exited operations after running heli/cat as a profit center failed economically. Sources: PRNewswire 2018, Ski Mag, First Tracks Online, and confirmation from Jeff Reece. (No single canonical URL.)",
@@ -306,25 +306,25 @@ const COMPARABLES = [
 
 const TEAM_DOCS = [
   {
-    eyebrow: "Internal — deck",
+    eyebrow: "Internal (deck)",
     title: "Monument Development Update (the team’s deck)",
     description:
       "The team’s investor-facing presentation; primary document the memo analyzes against. Held by the partnership; not publicly distributed. Stored in the project archive.",
   },
   {
-    eyebrow: "Internal — model",
+    eyebrow: "Internal (model)",
     title: "Team’s pro forma cash flow model",
     description:
       "The cash flow workbook to which the parametric engine reconciles. Source for the six headline numbers: revenue, levered XIRR, MOIC, net profit, Foundation end balance, and pre-existing debt service. Held by the partnership.",
   },
   {
-    eyebrow: "Internal — meeting notes",
+    eyebrow: "Internal (meeting notes)",
     title: "April 30, 2026 quarterly member meeting notes",
     description:
       "Verbatim source for the team’s acknowledgment that “not all of these lots may survive the final planning due to potential issues like water constraints or conflicts with hunting and wildlife concerns.” Cited throughout the memo as the April 30 admission.",
   },
   {
-    eyebrow: "Internal — research compilation",
+    eyebrow: "Internal (research compilation)",
     title: "Monument Rigor Consolidated Reference (May 4, 2026)",
     description:
       "The project’s internal research compilation underlying the five research blocks. Roughly 24 pages of source citations and context, stored in the project archive.",

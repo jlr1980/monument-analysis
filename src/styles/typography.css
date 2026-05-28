@@ -1,6 +1,6 @@
-/* Inter throughout, matching the Monument deck's sans-serif treatment. */
+/* Arimo throughout, matching the Monument deck's sans-serif treatment. */
 body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: "Arimo", system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.55;
   color: var(--ink);
@@ -8,38 +8,39 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Display headings: italic Inter, large, near-black. Matches the deck's
-   "Membership Types", "Funding the Ranch in perpetuity." treatment. */
+/* Display headings: upright Arimo, large, deep navy ink. Tightened bottom
+   margin so titles sit close to the prose they introduce. */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", sans-serif;
-  font-style: italic;
+  font-family: "Arimo", sans-serif;
   font-weight: 500;
   color: var(--ink);
   line-height: 1.15;
-  margin: 2.4rem 0 1rem;
+  margin: 2.4rem 0 0.55rem;
   letter-spacing: -0.005em;
 }
 
 h1 {
   font-size: 3.1rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-top: 0.5rem;
   letter-spacing: -0.015em;
 }
 
 h2 {
   font-size: 2rem;
-  margin-top: 3rem;
+  font-weight: 600;
+  margin-top: 2.6rem;
 }
 
 h3 {
   font-size: 1.4rem;
-  margin-top: 2.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
 }
 
 h4 {
   font-size: 1.15rem;
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
 }
 
 h5, h6 {
@@ -48,7 +49,7 @@ h5, h6 {
 }
 
 p, li {
-  font-family: "Inter", sans-serif;
+  font-family: "Arimo", sans-serif;
   font-size: 1rem;
   line-height: 1.65;
 }
@@ -70,10 +71,12 @@ a:hover {
 }
 
 strong, b {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
 }
 
+/* Inline emphasis kept available but unused by current content (which uses
+   bold only). No italics render anywhere in the hub today. */
 em, i {
   font-style: italic;
 }
@@ -111,7 +114,6 @@ blockquote {
   padding: 0.7rem 1.2rem;
   border-left: 3px solid var(--crimson);
   color: var(--ink);
-  font-style: italic;
   background: var(--cream-soft);
 }
 
@@ -123,8 +125,7 @@ blockquote p {
    "TODAY'S AGENDA", "PRIMARY", "$30M PERPETUAL OPERATIONAL SOLVENCY". */
 .eyebrow,
 .section-label {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+  font-family: "Arimo", sans-serif;
   font-weight: 600;
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -135,8 +136,7 @@ blockquote p {
 
 /* Stat number (large bold), matches "42", "50", "$30M". */
 .stat-number {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+  font-family: "Arimo", sans-serif;
   font-weight: 700;
   font-size: 3.4rem;
   line-height: 1;
@@ -145,7 +145,7 @@ blockquote p {
 }
 
 .stat-label {
-  font-family: "Inter", sans-serif;
+  font-family: "Arimo", sans-serif;
   font-size: 0.72rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -154,9 +154,8 @@ blockquote p {
   margin-top: 0.6rem;
 }
 
-/* Subtitle (italic, smaller, deck pattern from "Perpetual Foundation Fund target.") */
+/* Subtitle (smaller lead text, deck pattern from "Perpetual Foundation Fund target.") */
 .subtitle {
-  font-style: italic;
   font-size: 1.1rem;
   color: var(--ink);
   margin: 0 0 1rem;

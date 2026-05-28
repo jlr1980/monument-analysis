@@ -45,7 +45,9 @@ function NumberInput({ label, value, min, max, step, onChange, suffix }) {
             if (!Number.isNaN(v)) onChange(v);
           }}
         />
-        {suffix ? <span className="input-suffix">{suffix}</span> : null}
+        {/* Always render the suffix slot (empty when none) so every input box
+            shares the same right edge regardless of $K / % suffixes. */}
+        <span className="input-suffix">{suffix || ""}</span>
       </span>
     </label>
   );
@@ -139,7 +141,7 @@ function InputsPanel({ inputs, onChange }) {
 }
 
 function fmt(value, decimals = 1) {
-  if (!Number.isFinite(value)) return "—";
+  if (!Number.isFinite(value)) return "n/a";
   return value.toFixed(decimals);
 }
 
@@ -180,7 +182,7 @@ function OutputsPanel({ outputs, scenarioId }) {
         <Stat label="MOIC" value={fmt(outputs.moic, 2)} suffix="x" emphasis />
         <Stat
           label="Levered IRR"
-          value={Number.isFinite(outputs.xirr) ? fmt(outputs.xirr * 100, 1) : "—"}
+          value={Number.isFinite(outputs.xirr) ? fmt(outputs.xirr * 100, 1) : "n/a"}
           suffix={Number.isFinite(outputs.xirr) ? "%" : ""}
         />
       </div>

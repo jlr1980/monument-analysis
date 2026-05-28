@@ -1,29 +1,35 @@
 import { useState, useEffect } from "react";
 import SimulatorMode1 from "../components/SimulatorMode1.jsx";
-import SimulatorMode2 from "../components/SimulatorMode2.jsx";
 import SimulatorMode3 from "../components/SimulatorMode3.jsx";
 import { SCENARIOS } from "../lib/engine.js";
 
 const MODES = [
-  { id: 1, label: "Named scenarios", caption: "Pre-computed Monte Carlo for the four named scenarios" },
-  { id: 2, label: "Distribution variants", caption: "Adjust the input distributions (coming next)" },
-  { id: 3, label: "Custom configurations", caption: "Run the Monte Carlo against your own inputs" },
+  {
+    id: "named",
+    label: "Named scenarios",
+    caption: "Pre-computed Monte Carlo for the four named scenarios",
+  },
+  {
+    id: "custom",
+    label: "Custom configurations",
+    caption: "Run the Monte Carlo live against your own inputs",
+  },
 ];
 
 export default function Simulator() {
-  const [mode, setMode] = useState(1);
+  const [mode, setMode] = useState("named");
 
   // Pre-computed iteration data, lazy-loaded on first mount.
   const [iterData, setIterData] = useState(null);
   const [loadError, setLoadError] = useState(null);
 
-  // Mode 1 state: which scenario is shown.
-  const [mode1Scenario, setMode1Scenario] = useState("base");
+  // Named-scenarios state: which scenario is shown.
+  const [namedScenario, setNamedScenario] = useState("base");
 
-  // Mode 3 state: scenario starting point + inputs + results.
-  const [mode3ScenarioId, setMode3ScenarioId] = useState("base");
-  const [mode3Inputs, setMode3Inputs] = useState({ ...SCENARIOS.base });
-  const [mode3Results, setMode3Results] = useState(null);
+  // Custom state: scenario starting point + inputs + results.
+  const [customScenarioId, setCustomScenarioId] = useState("base");
+  const [customInputs, setCustomInputs] = useState({ ...SCENARIOS.base });
+  const [customResults, setCustomResults] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -48,12 +54,12 @@ export default function Simulator() {
     <article className="markdown-page simulator-page">
       <h1>Simulator</h1>
       <p>
-        Interactive Monte Carlo across the four named scenarios. Mode 1
-        shows the pre-computed 10,000-iteration distribution for each
-        scenario. Mode 3 runs a live 1,000-iteration sample against any
-        custom configuration. The underlying engine and stochastic drivers
-        are the same; see the Memo Section 6 for the analytical framing and
-        the Change Log for the build history.
+        Interactive Monte Carlo across the four named scenarios. Named
+        scenarios show the pre-computed 10,000-iteration distribution for each
+        scenario. Custom configurations run a live 1,000-iteration sample
+        against any set of inputs. The underlying engine and stochastic drivers
+        are the same; see Memo Section 6 for the analytical framing and the
+        Change Log for the build history.
       </p>
 
       <div className="mode-selector">
@@ -75,29 +81,27 @@ export default function Simulator() {
 
       {loadError ? (
         <div className="sim-loading">
-          Unable to load iteration data ({loadError}). Mode 1 unavailable;
-          Mode 3 still runs live.
+          Unable to load iteration data ({loadError}). Named scenarios
+          unavailable; custom configurations still run live.
         </div>
       ) : null}
 
-      {mode === 1 ? (
+      {mode === "named" ? (
         <SimulatorMode1
           data={iterData}
-          scenario={mode1Scenario}
-          setScenario={setMode1Scenario}
+          scenario={namedScenario}
+          setScenario={setNamedScenario}
         />
       ) : null}
 
-      {mode === 2 ? <SimulatorMode2 /> : null}
-
-      {mode === 3 ? (
+      {mode === "custom" ? (
         <SimulatorMode3
-          inputs={mode3Inputs}
-          setInputs={setMode3Inputs}
-          scenarioId={mode3ScenarioId}
-          setScenarioId={setMode3ScenarioId}
-          results={mode3Results}
-          setResults={setMode3Results}
+          inputs={customInputs}
+          setInputs={setCustomInputs}
+          scenarioId={customScenarioId}
+          setScenarioId={setCustomScenarioId}
+          results={customResults}
+          setResults={setCustomResults}
           baselineData={iterData}
         />
       ) : null}

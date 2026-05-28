@@ -165,7 +165,7 @@ body {
 
 /* Section block (h2 with section-number prefix; detected in MarkdownPage.jsx). */
 .section-block {
-  margin: 4.5rem 0 1.5rem;
+  margin: 4.5rem 0 0.8rem;
 }
 
 .section-block:first-child,
@@ -196,7 +196,7 @@ body {
 
 /* Subsection block (h3 with subsection-number prefix like 1.1, 6.2). */
 .subsection-block {
-  margin: 2.75rem 0 1rem;
+  margin: 2.75rem 0 0.6rem;
 }
 
 .subsection-eyebrow {
@@ -567,10 +567,6 @@ body {
 /* ---------- Interactive model widget ---------- */
 .model-interactive {
   margin: 2rem 0 3.5rem;
-  padding: 2rem 1.75rem 2.25rem;
-  background: var(--cream-soft);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
 }
 
 .scenario-selector {
@@ -692,8 +688,9 @@ body {
   font-family: "Arimo", sans-serif;
   font-size: 0.78rem;
   color: var(--muted);
-  min-width: 1.5rem;
+  min-width: 1.7rem;
   text-align: left;
+  flex-shrink: 0;
 }
 
 .outputs-grid {
@@ -1007,10 +1004,11 @@ body {
 }
 
 .sim-headline-value {
-  font-family: "Cormorant Garamond", "EB Garamond", serif;
-  font-weight: 500;
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
   font-size: 2rem;
   line-height: 1;
+  letter-spacing: -0.015em;
   color: var(--crimson);
   font-variant-numeric: tabular-nums;
 }
@@ -1140,41 +1138,7 @@ body {
   border-radius: var(--radius-sm);
 }
 
-/* Mode 2 stub */
-.simulator-mode-2-stub {
-  padding: 1.75rem 1.75rem 1.85rem;
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  max-width: 64ch;
-}
-
-.mode2-heading {
-  font-family: "Cormorant Garamond", "EB Garamond", serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  color: var(--ink);
-  margin: 0.4rem 0 1rem;
-  line-height: 1.2;
-}
-
-.simulator-mode-2-stub p {
-  font-size: 0.96rem;
-  line-height: 1.7;
-  color: var(--ink-soft);
-  margin: 0 0 1rem;
-}
-
-.simulator-mode-2-stub .placeholder-note {
-  color: var(--muted);
-  font-size: 0.88rem;
-  margin-top: 1.25rem;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-}
-
-/* Mode 3 layout */
+/* Custom-configurations layout */
 .mode3-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1286,38 +1250,24 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* ---------- Start Here hero image ---------- */
-.start-here-page {
-  padding-top: 1.5rem;
-}
-
-.start-here-hero {
-  position: relative;
-  width: 100%;
+/* ---------- Model panel delineation (inputs vs outputs) ---------- */
+.inputs-panel,
+.outputs-panel {
+  padding: 1.5rem 1.6rem 1.65rem;
+  background: var(--cream-soft);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  overflow: hidden;
-  margin: 0 0 2.5rem;
-  background: var(--navy);
 }
 
-.start-here-hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+/* Outputs read as "results": crimson left accent distinguishes the column
+   from the editable inputs, and on mobile (stacked) marks the boundary. */
+.outputs-panel {
+  border-left: 3px solid var(--crimson);
 }
 
-.start-here-hero-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    transparent 55%,
-    rgba(15, 26, 44, 0.18) 80%,
-    rgba(240, 229, 210, 0.65) 100%
-  );
+.inputs-panel .section-eyebrow,
+.outputs-panel .section-eyebrow {
+  margin-bottom: 0.5rem;
 }
 
 

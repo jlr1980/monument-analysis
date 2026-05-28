@@ -32,7 +32,7 @@ function NumberInput({ label, value, min, max, step, onChange, suffix }) {
             if (!Number.isNaN(v)) onChange(v);
           }}
         />
-        {suffix ? <span className="input-suffix">{suffix}</span> : null}
+        <span className="input-suffix">{suffix || ""}</span>
       </span>
     </label>
   );
@@ -258,9 +258,9 @@ export default function SimulatorMode3({ inputs, setInputs, scenarioId, setScena
               <p>
                 Configure inputs and click <strong>Run simulation</strong> to
                 draw {ITER_COUNT} stochastic samples against the current
-                configuration. The 10,000-iteration Mode 1 view is the
-                authoritative distribution for the named scenarios; this mode
-                is for asking &ldquo;what would my own configuration look
+                configuration. The 10,000-iteration Named scenarios view is
+                the authoritative distribution for the four scenarios; this
+                mode is for asking &ldquo;what would my own configuration look
                 like?&rdquo;
               </p>
             </div>
@@ -275,7 +275,7 @@ export default function SimulatorMode3({ inputs, setInputs, scenarioId, setScena
                     checked={compareBaseline}
                     onChange={(e) => setCompareBaseline(e.target.checked)}
                   />
-                  <span>Compare to {scenarioId} baseline (10K-iteration Mode 1)</span>
+                  <span>Compare to {scenarioId} baseline (10K-iteration Named scenarios)</span>
                 </label>
               ) : null}
 
@@ -347,8 +347,8 @@ export default function SimulatorMode3({ inputs, setInputs, scenarioId, setScena
 
               <p className="sim-caveat">
                 {ITER_COUNT}-iteration sample with independent stochastic
-                draws. The named scenarios in Mode 1 use 10,000 iterations
-                with correlated draws (the full kernel). Use Mode 1 as the
+                draws. The Named scenarios view uses 10,000 iterations with
+                correlated draws (the full kernel). Use it as the
                 authoritative distribution for those four scenarios.
               </p>
             </>
